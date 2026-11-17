@@ -1,0 +1,40 @@
+name: Grow my sakura tree
+
+on:
+  schedule:
+    # Runs daily at 00:00 IST (18:30 UTC)
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/grow_plant.py"
+      - ".github/workflows/grow-sakura.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  grow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate the sakura tree
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python scripts/grow_plant.py
+
+      - name: Commit updated tree
+        run: |
+          git config user.name "sakura-gardener[bot]"
+          git config user.email "sakura-gardener[bot]@users.noreply.github.com"
+          git add assets/plant.svg
+          git diff --cached --quiet || git commit -m "🌸 Grow my sakura tree"
+          git push
