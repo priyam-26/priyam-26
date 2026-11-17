@@ -48,19 +48,6 @@
 
 </div>
 
-## 🚀 Things I've Built
-
-| Project | What it is |
-|---|---|
-| [**priyam-space**](https://github.com/priyam-26/priyam-space) | My personal portfolio for web development and cybersecurity projects. |
-| [**SourceAudit**](https://github.com/priyam-26/SourceAudit) | A Python source-code auditing tool for basic code-quality checks. |
-| [**PyVision**](https://github.com/priyam-26/PyVision) | An interactive tool for visualizing Python concepts and execution. |
-| [**LabSync**](https://github.com/priyam-26/LabSync) | A lab equipment complaint-management portal for students and administrators. |
-| [**error-42**](https://github.com/priyam-26/error-42) | A hacker-inspired interactive 404 page with a Matrix-style background. |
-| [**library-management-system**](https://github.com/priyam-26/library-management-system) | A Java, JDBC and MySQL library management project. |
-
-Explore more on my [portfolio](https://priyam-26.github.io/priyam-space/).
-
 ## 🌱 Currently Exploring
 
 - Frontend development and responsive UI design
